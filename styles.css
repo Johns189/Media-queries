@@ -9,31 +9,57 @@ body {
   flex-grow: 1;
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 
-body>header {
-  background-color: green;
-}
 
 .content-area>main {
-  background-color: orange;
-
   flex-grow: 1;
 }
 
 .content-area>aside {
-  background-color: blueviolet;
   padding: 1rem;
 
   position: absolute;
   right: 0px;
+  translate: 80%;
+}
+
+.content-area>aside:hover {
+  translate: 0%;
+}
+@media(min-width: 400px) {
+  .content-area>aside {
+    position: initial;
+    translate: 0%;
+  }
 }
 
 body>footer {
-  background-color: aqua;
+
 }
 
 /*Utility*/
+.bg-primary {
+  background-color: blue;
+}
+
+.bg-accent {
+  background-color: chartreuse;
+}
+
+.transition-quickly {
+  transition: all 200ms ease-in-out;
+}
+
+.transition-slowly {
+  transition: all 400ms ease-in-out;
+}
+
+.floating {
+  box-shadow: 2px, 2px, 4px, 4px;
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
