@@ -1,19 +1,42 @@
-body {}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-area {
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+}
 
 body>header {
   background-color: green;
 }
 
-body>main {
+.content-area>main {
   background-color: orange;
+
+  flex-grow: 1;
 }
 
-body>aside {
+.content-area>aside {
   background-color: blueviolet;
+  padding: 1rem;
+
+  position: absolute;
+  right: 0px;
 }
 
 body>footer {
   background-color: aqua;
+}
+
+/*Utility*/
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }
 
 /*Box styling*/
